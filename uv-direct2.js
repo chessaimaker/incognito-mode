@@ -1,4 +1,4 @@
-var url = "https://www.2embed.to";
+var url = "https://www.2embed.cc";
 fetch("uv/uv.bundle.js")
   .then(x => x.text())
   .then(y => {
