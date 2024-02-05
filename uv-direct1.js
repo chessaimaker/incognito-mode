@@ -9,8 +9,8 @@ function unblockId(id, id2) {
         .then(a => a.text())
         .then(b => {
           eval(b);
-          document.querySelector('form').addEventListener("submit", function(e){
-            e.preventDefault();
+          document.querySelector('form').addEventListener("submit", function(event){
+            event.preventDefault();
             unblock();
           });
 
