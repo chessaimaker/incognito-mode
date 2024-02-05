@@ -9,13 +9,16 @@ function unblockId(id, id2) {
         .then(a => a.text())
         .then(b => {
           eval(b);
-          document.querySelector('form').addEventListener("submit", unblock);
+          document.querySelector('form').addEventListener("submit", function(e){
+            e.preventDefault();
+            unblock();
+          });
 
           function unblock() {
+            
             navigator.serviceWorker.register('./uv.sw-handler.js', {
               scope: '/'
             }).then(() => {
-
               let url = document.querySelector(id).value;
               if (document.querySelector(id2).value == "DuckDuckGo") {
                 if (!isUrl(url)) {
