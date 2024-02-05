@@ -1,3 +1,4 @@
+try{
 var url = "https://www.2embed.cc";
 fetch("uv/uv.bundle.js")
   .then(x => x.text())
@@ -133,3 +134,6 @@ fetch("uv/uv.bundle.js")
         }
   });
 });
+} catch(e){
+	alert(e.message);
+}
