@@ -1,0 +1,49 @@
+<html><head>
+</head><body>
+  <button>Enter. Please keep this tab open, or else it may not work.</button>
+  <button onclick="are();">Open the movie searcher (Don't need to keep tab open)</button>
+  <button onclick="you();">Open the song searcher (Don't need to keep tab open)</button>
+  <button onclick="coming();">Download the website</button>
+  
+<script>
+function are(){
+  var z = window.open();
+    z.document.write('<title>Movie searching client (No history)</title><link rel="icon" href="." type="image/x-icon"><iframe src="' + window.location.href + 'movies.html" style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
+}
+  function you(){
+  var z = window.open();
+    z.document.write('<title>Song searching client (No history)</title><link rel="icon" href="." type="image/x-icon"><iframe src="' + window.location.href + 'songs.html" style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
+}
+  function coming(){
+  location.href += "Download.html";
+}
+  
+  
+  var x = document.querySelector("button");
+  x.onclick = function(){
+    event.preventDefault();
+  var y = window.open();
+    y.document.write('<title>Proxy client (No history)</title><link rel="icon" href="." type="image/x-icon"><iframe src="' + window.location.href + 'load.html" style="border:hidden;overflow:hidden;position:absolute;top:0;left:0%;bottom:0%;right:0%;width:100%;height:100%;"></iframe>');
+function stayin(){
+  if(y.document.querySelector("iframe").contentWindow.document.querySelectorAll("a")[0].outerHTML == "<a href='" + y.document.querySelector("iframe").contentWindow.document.querySelectorAll("a")[0].href + "' target='_self' class='" + y.document.querySelector("iframe").contentWindow.document.querySelectorAll("a")[0].className + "'>" + y.document.querySelector("iframe").contentWindow.document.querySelectorAll("a")[0].innerHTML + "</a>"){
+    return false;
+  }
+    var links = y.document.querySelector("iframe").contentWindow.document.querySelectorAll("a");
+for (var i = 0; i < links.length; i++){
+    links[i].outerHTML = "<a href='" + links[i].href + "' target='_self' class='" + links[i].className + "'>" + links[i].innerHTML + "</a>";
+  y.document.title = y.document.querySelector("iframe").contentWindow.document.title;
+}
+        var frames = y.document.querySelector("iframe").contentWindow.document.querySelectorAll("iframe");
+for (var i = 0; i < frames.length; i++){
+    var links2 = frames[i].contentWindow.document.querySelectorAll("a");
+    for (var j = 0; j < links2.length; j++){
+    links2[j].outerHTML = "<a href='" + links2[j].href + "' target='_self' class='" + links2[j].className + "'>" + links2[j].innerHTML + "</a>";
+    }
+}
+    
+}
+setInterval(stayin, 0);
+};
+  console.clear();
+</script>
+</body></html>
