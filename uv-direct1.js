@@ -48,34 +48,7 @@ function unblockId(id, id2) {
                 url
               );
             });
-          } else {
-            let url = document.querySelector(id).value;
-            if (document.querySelector(id2).value == "DuckDuckGo") {
-              if (!isUrl(url)) {
-                url = 'https://duckduckgo.com/?q=' + url + '&va=j&t=hy&ia=web' + url;
-              }
-            }
-            if (document.querySelector(id2).value == "Startpage") {
-              if (!isUrl(url)) {
-                url = 'https://www.startpage.com/sp/search?sc=vMaiwTlP3EtK02&query=' + url;
-              }
-            } else if (document.querySelector(id2).value == "Google") {
-              if (!isUrl(url)) {
-                url = 'https://google.com/search?q=' + url;
-              }
-            } else if (document.querySelector(id2).value == "Yahoo") {
-              if (!isUrl(url)) {
-                url = 'https://search.yahoo.com/search?p=' + url;
-              }
-            } else if (document.querySelector(id2).value == "Bing") {
-              if (!isUrl(url)) {
-                url = 'https://bing.com/search?q=' + url;
-              }
-            } else if (!(url.startsWith('https://') || url.startsWith('http://'))) {
-              url = 'http://' + url;
-            };
-            window.location.href = url;
-          };
+          }
 
           function isUrl(val = '') {
             if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') {
