@@ -1,3 +1,4 @@
+var url = "https://www.2embed.to";
 fetch("uv/uv.bundle.js")
   .then(x => x.text())
   .then(y => {
@@ -15,7 +16,7 @@ fetch("uv/uv.bundle.js")
           var season = sea.value;
           var epi = document.getElementById("episode");
           var episode = epi.value;
-          var url = "https://www.2embed.to/embed/imdb/tv?id=" + id1 + "&s=" + season + "&e=" + episode;
+          var url = "" + url + "/embed/imdb/tv?id=" + id1 + "&s=" + season + "&e=" + episode;
 
           navigator.serviceWorker.register('./uv.sw-handler.js', {
             scope: '/'
@@ -45,7 +46,7 @@ fetch("uv/uv.bundle.js")
           var i11 = document.getElementById("id11");
           var id11 = i11.value;
           var quotations11 = "\"\"";
-          var url = "https://www.2embed.to/embed/imdb/movie?id=" + id11;
+          var url = "" + url + "/embed/imdb/movie?id=" + id11;
            navigator.serviceWorker.register('./uv.sw-handler.js', {
             scope: '/'
           }).then(() => {
@@ -78,7 +79,7 @@ fetch("uv/uv.bundle.js")
           var season2 = sea2.value;
           var epi2 = document.getElementById("episode2");
           var episode2 = epi2.value;
-          var url = "https://www.2embed.to/embed/imdb/tv?id=" + id12 + "&s=" + season2 + "&e=" + episode2;
+          var url = "" + url + "/embed/imdb/tv?id=" + id12 + "&s=" + season2 + "&e=" + episode2;
 
           navigator.serviceWorker.register('./uv.sw-handler.js', {
             scope: '/'
@@ -106,7 +107,7 @@ fetch("uv/uv.bundle.js")
         function unblock4() {
           var i22 = document.getElementById("id22");
           var id22 = i22.value;
-          var url = "https://www.2embed.to/embed/imdb/movie?id=" + id22;
+          var url = "" + url + "/embed/imdb/movie?id=" + id22;
            navigator.serviceWorker.register('./uv.sw-handler.js', {
             scope: '/'
           }).then(() => {
