@@ -10,7 +10,7 @@ var embedurl = "https://www.2embed.cc";
           var url = "" + embedurl + "/embed/imdb/tv?id=" + id1 + "&s=" + season + "&e=" + episode;
 if(blocked){
           navigator.serviceWorker.register('./uv.sw-handler.js', {
-            scope: '/'
+            scope: '/incognito-mode/'
           }).then(() => {
             if (!isUrl(url)) {
               url = 'https://google.com/search?q=' + url;
