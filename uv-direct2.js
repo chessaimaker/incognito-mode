@@ -1,4 +1,4 @@
-var blocked = true;
+var blocked = false;
 var embedurl = "https://www.2embed.cc";
         function unblock1() {
           var i1 = document.getElementById("id1");
