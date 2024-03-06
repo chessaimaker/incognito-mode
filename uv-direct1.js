@@ -17,7 +17,7 @@ function unblockId(id, id2) {
           function unblock() {
             
             navigator.serviceWorker.register('./uv.sw-handler.js', {
-              scope: '/'
+              scope: '/incognito-mode/'
             }).then(() => {
               let url = document.querySelector(id).value;
               if (document.querySelector(id2).value == "DuckDuckGo") {
